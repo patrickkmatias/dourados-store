@@ -12,7 +12,7 @@ export default function Document() {
                     rel="stylesheet"
                 />
             </Head>
-            <body className="w-full h-full bg-gray-900 text-white">
+            <body>
                 <NavBar />
                 <Main />
                 <NextScript />

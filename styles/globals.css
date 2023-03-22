@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    #__next {
+        @apply h-full;
+    }
+    html,
+    body {
+        @apply h-full flex flex-col bg-gray-900 text-white;
+    }
+}
+
 .translate-center-y {
     top: 50%;
     transform: translateY(-50%);
