@@ -10,9 +10,9 @@ const Product: React.FC<ProductModel> = (product) => {
     return (
         <section className="h-32 md:h-48 w-full flex rounded-3xl overflow-hidden shadow-lg">
             <div className="h-full w-32 md:w-48 bg-gray-700 relative overflow-hidden">
-                <picture></picture>
+                <div className='h-full w-full absolute z-10 shadow-inner shadow-black rounded-tl-3xl rounded-bl-3xl'></div>
                 <Image
-                    className="absolute top-0 left-0 z-0 shadow-inner object-cover"
+                    className="absolute top-0 left-0 z-0 object-cover"
                     fill
                     sizes='
                     (min-width: 768px) 192px,
@@ -23,7 +23,7 @@ const Product: React.FC<ProductModel> = (product) => {
                 />
             </div>
             <article className="p-4 flex-1 flex flex-col bg-gray-800">
-                <h1 className="text-xl font-sans font-bold drop-shadow-xl">
+                <h1 className="text-xl font-sans font-bold">
                     {product.name}
                 </h1>
                 <h2 className="text-sm font-medium opacity-80">
