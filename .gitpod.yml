@@ -1,0 +1,4 @@
+tasks:
+  - name: Dev Server
+    init: npm i
+    command: npm run dev
