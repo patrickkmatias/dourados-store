@@ -4,7 +4,7 @@
 
 @layer components {
     #__next {
-        @apply h-full flex flex-col;
+        @apply h-full flex flex-col pt-[84px];
     }
     html,
     body {
