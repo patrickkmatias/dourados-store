@@ -1,5 +1,4 @@
 import { Html, Head, Main, NextScript } from 'next/document';
-import NavBar from '@/components/navbar';
 
 export default function Document() {
     return (
@@ -13,7 +12,6 @@ export default function Document() {
                 />
             </Head>
             <body>
-                <NavBar />
                 <Main />
                 <NextScript />
             </body>

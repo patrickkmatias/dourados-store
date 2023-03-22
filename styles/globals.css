@@ -4,11 +4,11 @@
 
 @layer components {
     #__next {
-        @apply h-full;
+        @apply h-full flex flex-col;
     }
     html,
     body {
-        @apply h-full flex flex-col bg-gray-900 text-white;
+        @apply h-full bg-gray-900 text-white;
     }
 }
 

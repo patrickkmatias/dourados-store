@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import Product from '@/components/product';
 import { ProductModel } from '@/models/product';
+import Product from '@/components/product';
+import NavBar from '@/components/navbar';
 
 const prods: ProductModel[] = [
     {
@@ -59,6 +60,7 @@ export default function Home() {
                 />
                 <link rel="icon" href="/logo.svg" />
             </Head>
+            <NavBar />
             <main>
                 <ul className="w-full px-4 pt-8 md:px-8 flex flex-col md:flex-row flex-wrap justify-around">
                     {prods.map((prod, i) => {

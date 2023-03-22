@@ -1,5 +1,6 @@
 import { ProductModel } from '@/models/product';
 import { PlusSmallIcon } from '@heroicons/react/24/solid';
+import NavBar from '@/components/navbar';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -14,6 +15,7 @@ const ProductDetail: React.FC<ProductModel> = (product) => {
                 />
                 <link rel="icon" href="/logo.svg" />
             </Head>
+            <NavBar />
             <section className="h-full w-full py-8 px-4">
                 <div className="h-full w-fit my-0 mx-auto flex flex-col items-center bg-gray-800 rounded-3xl overflow-hidden">
                     <div className="h-2/4 w-[80vw] bg-gray-700 relative rounded-3xl shadow-inner">
