@@ -1,9 +1,17 @@
-import { ProductModel } from '@/models/product';
 import { PlusSmallIcon, PlusIcon } from '@heroicons/react/24/solid';
+import { useRouter } from 'next/router';
+import { products } from '@/utils/data';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 
-export default function ProductDetail(product: ProductModel) {
+export default function ProductDetail() {
+    const { slug } = useRouter().query;
+    const product = products.find((p) => p.slug === slug);
+
+    if (!product) {
+        return <div>Produt Not Found</div>;
+    }
+
     return (
         <>
             <Layout title={product.name} start>
@@ -18,17 +26,17 @@ export default function ProductDetail(product: ProductModel) {
                             (min-width: 768px) 1024px,
                             512px
                             "
-                                src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=753&q=80"
+                                src={product.imageUrl}
                                 alt="Product Image"
                             />
                         </div>
                         <article className="h-full w-full flex flex-col justify-between">
                             <div className="w-full py-3 md:py-6 flex flex-col items-center bg-black">
                                 <h1 className="text-xl md:text-2xl font-sans font-bold">
-                                    Hair mask
+                                    {product.name}
                                 </h1>
                                 <h2 className="mt-1 md:text-lg font-medium opacity-80">
-                                    $ 60
+                                    $ {product.price}
                                 </h2>
                             </div>
                             <button className="w-full h-12 mt-auto pl-6 p-1 md:py-8 inline-flex items-center text-sm font-medium bg-[#0ca7a590] shadow focus:bg-[#0ca7a5] hover:shadow-md hover:bg-[#0ca7a599] transition-all">
