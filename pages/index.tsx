@@ -1,22 +1,11 @@
 import { products } from '@/utils/data';
-import Head from 'next/head';
+import Layout from '@/components/Layout';
 import Product from '@/components/product';
-import NavBar from '@/components/navbar';
 
 export default function Home() {
     return (
         <>
-            <Head>
-                <title>Dourado's Store</title>
-                <meta name="description" content="Dourados Store" />
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
-                <link rel="icon" href="/logo.svg" />
-            </Head>
-            <NavBar />
-            <main>
+            <Layout title="">
                 <ul className="w-full px-4 pt-8 md:px-8 flex flex-col md:flex-row flex-wrap justify-around">
                     {products.map((prod, i) => {
                         return (
@@ -26,7 +15,7 @@ export default function Home() {
                         );
                     })}
                 </ul>
-            </main>
+            </Layout>
         </>
     );
 }
