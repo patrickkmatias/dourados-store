@@ -35,7 +35,7 @@ export default function Product(product: ProductModel) {
                         </h3>
                     </button>
                     <Link
-                        href={`/product/${product.id}`}
+                        href={`/product/${product.slug}`}
                         className="w-fit ml-2 md:ml-4 p-1 md:p-2 inline-flex items-center text-sm font-medium bg-[#0ca7a590] rounded-lg shadow focus:bg-[#0ca7a5] hover:shadow-md hover:bg-[#0ca7a599] transition-all"
                     >
                         <EllipsisHorizontalIcon className="w-6 h-6" />
