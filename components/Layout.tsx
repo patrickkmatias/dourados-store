@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import Head from 'next/head';
-import NavBar from '@/components/navbar';
+import NavBar from './NavBar';
 
 interface LayoutProps {
     start?: boolean;

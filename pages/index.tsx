@@ -1,6 +1,6 @@
 import { products } from '@/utils/data';
 import Layout from '@/components/Layout';
-import Product from '@/components/product';
+import Product from '@/components/Product';
 
 export default function Home() {
     return (

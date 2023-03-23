@@ -2,7 +2,7 @@ import { ShoppingCartIcon, ArrowLeftIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 
-const NavBar = () => {
+export default function NavBar() {
     const router = useRouter();
     const isRootPath = router.asPath === '/';
 
@@ -29,6 +29,4 @@ const NavBar = () => {
             </Link>
         </nav>
     );
-};
-
-export default NavBar;
+}
