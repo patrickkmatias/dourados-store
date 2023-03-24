@@ -7,7 +7,7 @@ export default function NavBar() {
     const isRootPath = router.asPath === '/';
 
     return (
-        <nav className="p-4 w-full fixed z-50 top-0 left-0 border-b-4 border-b-dourados-golden flex justify-between bg-black shadow-lg">
+        <nav className="p-4 w-full fixed z-50 top-0 left-0 rounded-bl-3xl rounded-br-3xl border-b-4 border-b-dourados-golden flex justify-between bg-black shadow-xl">
             <h1 className="inline-flex items-center px-3 text-2xl font-sans font-extrabold tracking-wide rounded-md">
                 Store
             </h1>
