@@ -9,14 +9,16 @@ interface LayoutProps {
 }
 
 export default function Layout({ start, title, children }: LayoutProps) {
+    const processedTitle = title
+        ? start
+            ? `${title} | Dourado's Store`
+            : `Dourado's Store | ${title}`
+        : `Dourado's Store`;
+
     return (
         <>
             <Head>
-                {start ? (
-                    <title>{title ? `${title} | ` : ''}Dourado's Store</title>
-                ) : (
-                    <title>Dourado's Store{title ? ` | ${title}` : ''}</title>
-                )}
+                <title>{processedTitle}</title>
                 <meta
                     name="description"
                     content={`Dourados Store ${title ? title : ''}`}
