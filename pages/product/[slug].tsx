@@ -48,9 +48,16 @@ export default function ProductDetail() {
                                     $ {product.price}
                                 </h2>
                             </div>
+                            <p className="h-fit m-4 p-3 rounded-2xl text-sm text-gray-100 bg-gray-900 shadow">
+                                {product.description}
+                            </p>
                             <button
                                 onClick={addProductHandler}
-                                className={`w-full h-12 mt-auto pl-6 p-1 md:py-8 inline-flex items-center text-sm font-medium shadow hover:shadow-md transition-all ${added ? `bg-green-500 hover:bg-green-600 focus:bg-green-600` : `bg-[#0ca7a590] hover:bg-[#0ca7a599] focus:bg-[#0ca7a5] `}`}
+                                className={`w-full h-12 mt-auto pl-6 p-1 md:py-8 inline-flex items-center text-sm font-medium shadow hover:shadow-md transition-all ${
+                                    added
+                                        ? `bg-green-500 hover:bg-green-600 focus:bg-green-600`
+                                        : `bg-[#0ca7a590] hover:bg-[#0ca7a599] focus:bg-[#0ca7a5] `
+                                }`}
                             >
                                 <h3 className="max-w-fit inline-flex items-center mr-1 md:ml-4 md:text-base">
                                     {added ? (
