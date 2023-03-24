@@ -30,7 +30,7 @@ export default function Cart() {
                                 key={prod.slug}
                                 className="w-full h-fit md:w-[45%] mb-8"
                             >
-                                <Product {...prod} cartItem />
+                                <Product {...prod} cartItemView />
                             </li>
                         ))}
                     </ul>
