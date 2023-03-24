@@ -4,5 +4,6 @@ export interface ProductModel {
     slug: string;
     description: string;
     price: number;
+    price_id: string;
     imageUrl: string;
 }
