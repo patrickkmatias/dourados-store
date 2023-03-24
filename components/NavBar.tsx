@@ -21,7 +21,7 @@ export default function NavBar() {
             </h1>
             <div className="flex flex-row-reverse">
                 <Link
-                    href={isRootPath ? '/cart' : '/'}
+                    href="/cart"
                     className="p-3 mx-3 inline-flex bg-gray-800 rounded-2xl focus:bg-gray-700 transition-colors"
                 >
                     <ShoppingCartIcon className="w-6 h-6" />
