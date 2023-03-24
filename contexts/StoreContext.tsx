@@ -8,10 +8,10 @@ const initialStore: StoreState = {
 export const StoreContext = createContext<{
     state: StoreState;
     dispatch: React.Dispatch<any>;
-  }>({
+}>({
     state: initialStore,
-    dispatch: () => null
-  });
+    dispatch: () => null,
+});
 
 /**
  * Changes the actual state of the StoreContext
@@ -32,6 +32,12 @@ function reducer(state: StoreState, action: CartAction) {
                     cart: { cartItems: [...items, newItem] },
                 };
             }
+        }
+        case 'CART_REMOVE_ITEM': {
+            const cartItems = state.cart.cartItems.filter(
+                (item) => item.slug !== action.payload.slug
+            );
+            return { ...state, cart: { ...state.cart, cartItems } };
         }
         default:
             return state;
