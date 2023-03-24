@@ -15,7 +15,7 @@ export default function CartFooter(cartItems: ProductModel[]) {
     }
 
     return (
-        <footer className="w-full p-8 pt-0 flex flex-col fixed bottom-0 left-0 z-50 bg-black border-t-4 border-t-dourados-golden">
+        <footer className="w-full p-8 pt-0 flex flex-col fixed bottom-0 left-0 z-50 bg-black rounded-tl-3xl rounded-tr-3xl border-t-4 border-t-dourados-golden shadow-xl">
             <table className="my-4">
                 <tbody>
                     <tr>
