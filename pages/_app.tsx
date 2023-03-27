@@ -1,4 +1,7 @@
 import '@/styles/globals.css';
+import '@/styles/animated-logo.css';
+import '@/styles/animated-loading-text.css';
+
 import type { AppProps } from 'next/app';
 import { StoreProvider } from '@/contexts/StoreContext';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
