@@ -7,7 +7,9 @@
   
   It will install dependencies and start the development server just for you =)
   
-###### Limitation: it's needed some environment to make Stripe's checkout work.
+###### Limitation: it's needed some environment variables to make Stripe's checkout work.
+
+[Visit this project API](https://github.com/pmattheew/dourados-store-api)
 
 <details>
 <summary><h2> 🕰 My changelog</h2></summary>
