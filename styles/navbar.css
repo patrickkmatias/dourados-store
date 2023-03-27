@@ -1,0 +1,15 @@
+.loading-nav {
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        border-color: #e8ae4a;
+    }
+    50% {
+        border-color: #e8ae4a50;
+    }
+    100% {
+        border-color: #e8ae4a;
+    }
+}

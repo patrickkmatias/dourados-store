@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import '@/styles/navbar.css';
 import '@/styles/animated-logo.css';
 import '@/styles/animated-loading-text.css';
 
