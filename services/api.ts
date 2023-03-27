@@ -1,8 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-// Must be changed to Vercel's API main branch URL
-const API_BASE_URL = 'https://dourados-store-iey50kylq-pmattheew.vercel.app/';
+const API_BASE_URL = 'https://dourados-store-api.vercel.app/';
 
 export function get<T>(endpoint: string) {
     const queryKey = ['get', endpoint];
