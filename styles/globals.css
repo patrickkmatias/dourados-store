@@ -4,11 +4,11 @@
 
 @layer components {
     #__next {
-        @apply h-full flex flex-col pt-[84px];
+        @apply md:max-w-screen-xl h-full flex flex-col pt-[84px];
     }
     html,
     body {
-        @apply h-full bg-gray-900 text-white;
+        @apply md:max-w-screen-xl h-full mx-auto bg-gray-900 text-white;
     }
 }
 
