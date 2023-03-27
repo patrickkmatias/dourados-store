@@ -1,6 +1,7 @@
 import { StoreContext } from '@/contexts/StoreContext';
 import { useContext } from 'react';
-import { products } from '@/utils/data';
+import { ProductModel } from '@/models';
+import { get } from '@/services/api';
 import Layout from '@/components/Layout';
 import Product from '@/components/Product';
 
@@ -10,15 +11,21 @@ export default function Home() {
         cart: { cartItems },
     } = state;
 
-    // MUST be changed when receiving external data,
-    // preferably with greater than '>'
-    const hasProducts = cartItems.length === 3 ? false : true;
+    const {
+        data: products,
+        isLoading,
+        isError,
+    } = get<ProductModel[]>('products');
+    if (isLoading) return <div>its loading...</div>;
+    if (isError) return <div>Oh snap! We had an error!</div>;
+
+    const hasProducts = cartItems.length === products!.length ? false : true;
 
     return (
         <>
             <Layout title="">
                 <ul className="w-full px-4 pt-8 md:px-8 flex flex-col md:flex-row flex-wrap md:justify-around">
-                    {products.map((prod, i) => {
+                    {products!.map((prod, i) => {
                         return (
                             <li key={i} className="w-full md:w-[45%] mb-8">
                                 <Product {...prod} />

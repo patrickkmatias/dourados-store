@@ -1,6 +1,6 @@
 import { ChevronRightIcon, CreditCardIcon } from '@heroicons/react/24/outline';
 import { ProductModel } from '@/models';
-import getStripe from '@/utils/get-stripe';
+import getStripe from '@/services/get-stripe';
 import axios from 'axios';
 
 export default function CheckoutButton(props: ProductModel[]) {

@@ -2,14 +2,23 @@ import { PlusSmallIcon, PlusIcon } from '@heroicons/react/24/solid';
 import { useRouter } from 'next/router';
 import { StoreContext } from '@/contexts/StoreContext';
 import { useContext } from 'react';
-import { products } from '@/utils/data';
+import { CheckCircleIcon } from '@heroicons/react/24/outline';
+import { ProductModel } from '@/models';
+import { get } from '@/services/api';
 import Layout from '@/components/Layout';
 import Image from 'next/image';
-import { CheckCircleIcon } from '@heroicons/react/24/outline';
 
 export default function ProductDetail() {
     const { state, dispatch } = useContext(StoreContext);
     const { slug } = useRouter().query;
+    const {
+        data: products,
+        isLoading,
+        isError,
+    } = get<ProductModel[]>('products');
+    if (isLoading) return <div>its loading...</div>;
+    if (isError) return <div>Oh snap! We had an error!</div>;
+
     const product = products.find((p) => p.slug === slug);
     const added = state.cart.cartItems.find((p) => p.slug === slug);
 
