@@ -20,7 +20,7 @@ export default function Home() {
     } = get<ProductModel[]>('products');
 
     if (isLoading) return (
-        <div className="w-full mx-auto flex flex-col justify-center items-center">
+        <div className="w-full h-full md:w-3/5 mx-auto flex flex-col justify-around items-center">
             <AnimatedLogo />
             <span className="w-3/5">
                 <AnimatedLoadingText />

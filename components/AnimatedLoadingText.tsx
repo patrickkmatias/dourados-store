@@ -1,10 +1,10 @@
 export default function AnimatedLoadingText(props: { button?: boolean }) {
     return (
-        <div className={props.button ? 'loading-container w-full h-[40px] md:h-full !mx-0 flex justify-start items-center' : 'loading-container'}>
+        <div className={props.button ? 'loading-container w-full h-[40px] md:h-full !mx-0 flex justify-start items-center' : 'loading-container md:pb-4'}>
             {props.button ? 
                 <div className="ml-4 text-sm">Loading...</div>
                 :
-                <div className='loading-text'>
+                <div className='loading-text md:!text-xl'>
                     <span>L</span>
                     <span>O</span>
                     <span>A</span>
