@@ -4,6 +4,8 @@ import { ProductModel } from '@/models';
 import { get } from '@/services/api';
 import Layout from '@/components/Layout';
 import Product from '@/components/Product';
+import AnimatedLogo from '@/components/AnimatedLogo';
+import AnimatedLoadingText from '@/components/AnimatedLoadingText';
 
 export default function Home() {
     const { state } = useContext(StoreContext);
@@ -16,7 +18,16 @@ export default function Home() {
         isLoading,
         isError,
     } = get<ProductModel[]>('products');
-    if (isLoading) return <div>its loading...</div>;
+
+    if (isLoading) return (
+        <div className="w-full mx-auto flex flex-col justify-center items-center">
+            <AnimatedLogo />
+            <span className="w-3/5">
+                <AnimatedLoadingText />
+            </span>
+        </div>
+    );
+
     if (isError) return <div>Oh snap! We had an error!</div>;
 
     const hasProducts = cartItems.length === products!.length ? false : true;
